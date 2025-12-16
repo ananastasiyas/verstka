@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Style - Магазин одежды</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-tshirt"></i> Urban Style</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" >Главная</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#table">Таблица размеров</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Современный стиль для каждого дня</h2>
+                <p>Откройте для себя коллекцию женской одежды, которая сочетает в себе комфорт, качество и актуальные тренды.</p>
+                <a href="#catalog" class="btn">Смотреть каталог</a>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2>Каталог одежды</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category">Категория:</label>
+                        <select id="category">
+                            <option value="all">Все товары</option>
+                            <option value="tops">Верхняя одежда</option>
+                            <option value="bottoms">Штаны и юбки</option>
+                            <option value="dresses">Платья</option>
+                            <option value="accessories">Аксессуары</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price">Цена:</label>
+                        <input type="range" id="price" min="500" max="5000" value="5000">
+                        <span id="price-value">5000 руб.</span>
+                    </div>
+                    <div class="filter-group">
+                        <button id="reset-filters" class="btn-secondary">Сбросить фильтры</button>
+                    </div>
+                </div>
+
+                <div class="products">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="table" class="size-table">
+            <div class="container">
+                <h2>Таблица размеров</h2>
+                <p>Используйте эту таблицу для подбора правильного размера одежды. Выделите строку для удобного сравнения.</p>
+                
+                <div class="table-controls">
+                    <button id="highlight-large" class="btn-secondary">Выделить большие размеры</button>
+                    <button id="reset-highlight" class="btn-secondary">Сбросить выделение</button>
+                </div>
+                
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Тип одежды</th>
+                                <th>Размер</th>
+                                <th>Обхват груди (см)</th>
+                                <th>Обхват талии (см)</th>
+                                <th>Обхват бедер (см)</th>
+                                <th>Длина (см)</th>
+                                <th>Рекомендуемый рост</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>О магазине Urban Style</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Мы - современный магазин одежды, предлагающий стильные и качественные вещи для мужчин и женщин. Наша миссия - сделать моду доступной для каждого.</p>
+                        <p>В нашем ассортименте вы найдете одежду на все случаи жизни: от повседневных образов до специальных мероприятий.</p>
+                        <h3>Наши преимущества:</h3>
+                        <ul>
+                            <li>Высокое качество материалов</li>
+                            <li>Современный дизайн</li>
+                            <li>Доступные цены</li>
+                            <li>Быстрая доставка</li>
+                            <li>Примерка перед покупкой</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/interer.png" alt="Интерьер магазина Urban Style">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Свяжитесь с нами</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Контактная информация</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, д. 10</p>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@urbanstyle.ru</p>
+                        <p><i class="fas fa-clock"></i> Пн-Пт: 10:00-20:00, Сб-Вс: 11:00-18:00</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Хочешь работать с нами? Оставь заявку!</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tshirt"></i> Urban Style</h3>
+                    <p>Современная одежда для активной жизни</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#table">Таблица размеров</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Urban Style.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
